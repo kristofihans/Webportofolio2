@@ -17,7 +17,7 @@ export default function BackgroundScroll() {
         const promise = new Promise((resolve) => {
           const img = new Image();
           const frameIndex = i.toString().padStart(3, '0');
-          img.src = `/frames/ezgif-frame-${frameIndex}.jpg`;
+          img.src = `${import.meta.env.BASE_URL}frames/ezgif-frame-${frameIndex}.jpg`;
           img.onload = () => {
             imagesRef.current[i - 1] = img;
             resolve();
