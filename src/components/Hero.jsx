@@ -18,13 +18,13 @@ export default function Hero() {
            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
            className="hero-left"
         >
-          <div className="hero-greeting" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.2rem', marginBottom: '1rem', fontWeight: 500 }}>
+          <div style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.95rem', marginBottom: '1rem', fontWeight: 500 }}>
             Hello, I'm Hans
           </div>
           <h1>
             A passionate web developer building powerful digital experiences.
           </h1>
-          <p className="hero-desc" style={{ fontSize: '1.25rem', marginBottom: '1rem', maxWidth: '500px' }}>
+          <p style={{ fontSize: '1.05rem', marginBottom: '1rem', maxWidth: '500px' }}>
             — clean code, bold design, real results.
           </p>
         </motion.div>
@@ -36,9 +36,9 @@ export default function Hero() {
            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
            className="hero-right"
         >
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '3.5rem', alignItems: 'flex-end', width: '100%' }}>
+          <div className="hero-metrics-container" style={{ display: 'flex', flexDirection: 'column', gap: '3.5rem', width: '100%' }}>
             
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+            <div className="hero-buttons" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <a href="#work" className="btn btn-solid">
                 See My Work <ArrowRight size={18} />
               </a>
@@ -47,18 +47,18 @@ export default function Hero() {
               </a>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'row', gap: '2rem', textAlign: 'right', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+            <div className="hero-metrics-row" style={{ display: 'flex', flexDirection: 'row', gap: '2rem', flexWrap: 'wrap' }}>
               <div>
-                <div className="metric-num" style={{ fontSize: '2.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.2rem', lineHeight: 1 }}>10+</div>
-                <div className="metric-label" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>Projects Built</div>
+                <div style={{ fontSize: '2.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.2rem', lineHeight: 1 }}>10+</div>
+                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>Projects Built</div>
               </div>
               <div>
-                <div className="metric-num" style={{ fontSize: '2.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.2rem', lineHeight: 1 }}>100%</div>
-                <div className="metric-label" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>Client Satisfaction</div>
+                <div style={{ fontSize: '2.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.2rem', lineHeight: 1 }}>100%</div>
+                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>Client Satisfaction</div>
               </div>
               <div>
-                <div className="metric-num" style={{ fontSize: '2.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.2rem', lineHeight: 1 }}>24h</div>
-                <div className="metric-label" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>Response Time</div>
+                <div style={{ fontSize: '2.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.2rem', lineHeight: 1 }}>24h</div>
+                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>Response Time</div>
               </div>
             </div>
           </div>
