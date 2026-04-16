@@ -18,13 +18,13 @@ export default function Hero() {
            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
            className="hero-left"
         >
-          <div className="hero-greeting" style={{ color: 'rgba(255, 255, 255, 0.7)', marginBottom: '1rem', fontWeight: 500 }}>
+          <div className="hero-greeting" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.2rem', marginBottom: '1rem', fontWeight: 500 }}>
             Hello, I'm Hans
           </div>
           <h1>
             A passionate web developer building powerful digital experiences.
           </h1>
-          <p className="hero-desc" style={{ marginBottom: '1rem', maxWidth: '500px' }}>
+          <p className="hero-desc" style={{ fontSize: '1.25rem', marginBottom: '1rem', maxWidth: '500px' }}>
             — clean code, bold design, real results.
           </p>
         </motion.div>
@@ -49,16 +49,16 @@ export default function Hero() {
 
             <div style={{ display: 'flex', flexDirection: 'row', gap: '2rem', textAlign: 'right', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
               <div>
-                <div className="hero-metric-val" style={{ fontWeight: 600, color: '#fff', marginBottom: '0.2rem', lineHeight: 1 }}>10+</div>
-                <div className="hero-metric-label" style={{ color: 'rgba(255,255,255,0.6)' }}>Projects Built</div>
+                <div className="metric-num" style={{ fontSize: '2.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.2rem', lineHeight: 1 }}>10+</div>
+                <div className="metric-label" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>Projects Built</div>
               </div>
               <div>
-                <div className="hero-metric-val" style={{ fontWeight: 600, color: '#fff', marginBottom: '0.2rem', lineHeight: 1 }}>100%</div>
-                <div className="hero-metric-label" style={{ color: 'rgba(255,255,255,0.6)' }}>Client Satisfaction</div>
+                <div className="metric-num" style={{ fontSize: '2.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.2rem', lineHeight: 1 }}>100%</div>
+                <div className="metric-label" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>Client Satisfaction</div>
               </div>
               <div>
-                <div className="hero-metric-val" style={{ fontWeight: 600, color: '#fff', marginBottom: '0.2rem', lineHeight: 1 }}>24h</div>
-                <div className="hero-metric-label" style={{ color: 'rgba(255,255,255,0.6)' }}>Response Time</div>
+                <div className="metric-num" style={{ fontSize: '2.25rem', fontWeight: 600, color: '#fff', marginBottom: '0.2rem', lineHeight: 1 }}>24h</div>
+                <div className="metric-label" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem' }}>Response Time</div>
               </div>
             </div>
           </div>

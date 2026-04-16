@@ -183,22 +183,6 @@ p {
   justify-content: flex-end;
 }
 
-.hero-greeting {
-  font-size: 1.2rem;
-}
-
-.hero-desc {
-  font-size: 1.25rem;
-}
-
-.hero-metric-val {
-  font-size: 2.25rem;
-}
-
-.hero-metric-label {
-  font-size: 0.9rem;
-}
-
 /* Projects styling */
 .project-iframe-container {
   padding-top: 65%;
@@ -208,30 +192,16 @@ p {
   .hero-layout {
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 15vh;
-    padding-bottom: 2vh;
-    gap: 2rem;
+    margin-top: 15vh; /* Returned elements to the top */
+    padding-bottom: 5vh;
+    gap: 3rem;
   }
   
-  .hero-left h1 {
-    font-size: 1.6rem;
-  }
-  
-  .hero-greeting {
-    font-size: 1rem;
-  }
-
-  .hero-desc {
-    font-size: 1rem;
-  }
-
-  .hero-metric-val {
-    font-size: 1.5rem;
-  }
-
-  .hero-metric-label {
-    font-size: 0.8rem;
-  }
+  .hero-greeting { fontSize: 1rem !important; }
+  .hero-left h1 { font-size: 2rem !important; }
+  .hero-desc { font-size: 1rem !important; }
+  .metric-num { font-size: 1.7rem !important; }
+  .metric-label { font-size: 0.8rem !important; }
   
   .project-iframe-container {
     padding-top: 130%; /* Much taller ratio for mobile */
