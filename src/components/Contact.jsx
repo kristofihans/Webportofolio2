@@ -12,7 +12,7 @@ export default function Contact() {
            viewport={{ once: true, margin: "-100px" }}
            transition={{ duration: 0.8 }}
         >
-          <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', padding: '60px 40px' }}>
+          <div className="glass-card" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', padding: '60px 40px', background: 'rgba(255, 255, 255, 0.08)', borderColor: 'rgba(255, 255, 255, 0.15)' }}>
             <h2 style={{ marginBottom: '1rem' }}>Let's Work Together</h2>
             <p style={{ marginBottom: '3rem', marginLeft: 'auto', marginRight: 'auto', maxWidth: '500px', display: 'inline-block' }}>
               Ready to launch your next project? Have a question? Message me directly on WhatsApp — I respond fast.
