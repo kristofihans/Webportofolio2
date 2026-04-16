@@ -39,35 +39,18 @@ export default function Projects() {
         >
           <h2 style={{ marginBottom: '4rem', textAlign: 'center' }}>Selected Projects</h2>
           
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+          <div className="slider-container">
             
             <button 
               onClick={() => scroll('left')} 
-              className="btn btn-outline" 
-              style={{ 
-                position: 'absolute', 
-                left: '10px', 
-                zIndex: 20, 
-                padding: '16px', 
-                borderRadius: '50%',
-                background: 'rgba(5, 5, 5, 0.8)',
-                backdropFilter: 'blur(8px)'
-              }}
+              className="btn btn-outline slider-arrow slider-arrow-left" 
             >
-              <ChevronLeft size={32} />
+              <ChevronLeft />
             </button>
 
             <div 
               ref={scrollRef}
-              className="hide-scrollbar"
-              style={{ 
-                display: 'flex', 
-                width: '100%',
-                overflowX: 'auto', 
-                scrollSnapType: 'x mandatory',
-                paddingBottom: '2rem',
-                scrollBehavior: 'smooth'
-              }}
+              className="hide-scrollbar slider-track"
             >
               {projects.map((proj, idx) => (
                 <div 
@@ -135,18 +118,9 @@ export default function Projects() {
 
             <button 
               onClick={() => scroll('right')} 
-              className="btn btn-outline" 
-              style={{ 
-                position: 'absolute', 
-                right: '10px', 
-                zIndex: 20, 
-                padding: '16px', 
-                borderRadius: '50%',
-                background: 'rgba(5, 5, 5, 0.8)',
-                backdropFilter: 'blur(8px)'
-              }}
+              className="btn btn-outline slider-arrow slider-arrow-right"
             >
-              <ChevronRight size={32} />
+              <ChevronRight />
             </button>
 
           </div>

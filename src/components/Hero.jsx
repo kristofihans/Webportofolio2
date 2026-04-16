@@ -1,15 +1,11 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowRight, MessageSquare } from 'lucide-react';
 
 export default function Hero() {
-  const { scrollY } = useScroll();
-  const opacity = useTransform(scrollY, [0, 400], [1, 0]);
-  const y = useTransform(scrollY, [0, 400], [0, -50]);
-
   return (
     <section id="hero" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
-      <motion.div className="container hero-layout" style={{ opacity, y }}>
+      <div className="container hero-layout">
         
         {/* Left Side Elements */}
         <motion.div
@@ -63,7 +59,7 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }

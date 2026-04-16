@@ -200,19 +200,81 @@ p {
   padding-top: 65%;
 }
 
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.slider-track {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 2rem;
+  scroll-behavior: smooth;
+  order: 1; /* Track stays on top in wrapped flow */
+}
+
+.slider-arrow {
+  position: absolute;
+  z-index: 20;
+  padding: 16px;
+  border-radius: 50%;
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-arrow-left {
+  left: 10px;
+}
+
+.slider-arrow-right {
+  right: 10px;
+}
+
+.slider-arrow svg {
+  width: 32px;
+  height: 32px;
+}
+
 @media (max-width: 900px) {
+  .section {
+    padding: 60px 0;
+  }
+
   .hero-layout {
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 65vh;
-    padding-bottom: 10vh;
-    gap: 4rem;
+    padding-bottom: 0;
+    gap: 3rem;
   }
   
   .project-iframe-container {
     padding-top: 130%; /* Much taller ratio for mobile */
   }
 
+  .slider-arrow {
+    position: static; /* Removes the absolute overlay */
+    padding: 12px;
+    order: 2; /* Drops below the slider track in flex wrap */
+  }
+
+  .slider-arrow svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .slider-track {
+    padding-bottom: 0.5rem;
+  }
   
   .hero-left, .hero-right {
     max-width: 100%;
