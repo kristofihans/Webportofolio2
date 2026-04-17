@@ -110,6 +110,11 @@ p {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+.glass-card-solid {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -247,6 +252,11 @@ p {
 @media (max-width: 900px) {
   .section {
     padding: 60px 0;
+  }
+
+  .glass-card-solid {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.3);
   }
 
   .hero-layout {
