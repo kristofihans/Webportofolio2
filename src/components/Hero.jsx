@@ -4,24 +4,19 @@ import { ArrowRight, MessageSquare, ArrowDown } from 'lucide-react';
 
 export default function Hero() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    const handleResize = () => setIsMobile(window.innerWidth <= 900);
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     
     handleScroll();
-    handleResize();
-
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  const hideContentOnMobile = isMobile && !isScrolled;
+  const hideContentOnInit = !isScrolled;
 
   return (
     <section id="hero" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
@@ -29,18 +24,18 @@ export default function Hero() {
       {/* Scroll Indicator */}
       <div 
         style={{
-          position: 'absolute',
-          bottom: '10vh',
+          position: 'fixed',
+          bottom: '5vh',
           left: '50%',
           transform: 'translateX(-50%)',
-          opacity: hideContentOnMobile ? 1 : 0,
+          opacity: hideContentOnInit ? 1 : 0,
           pointerEvents: 'none',
           transition: 'opacity 0.5s ease',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           gap: '8px',
-          zIndex: 20
+          zIndex: 50
         }}
       >
         <span style={{ fontSize: '0.8rem', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)' }}>Scroll</span>
@@ -52,9 +47,9 @@ export default function Hero() {
       <div 
         className="container hero-layout"
         style={{
-          opacity: hideContentOnMobile ? 0 : 1,
-          transform: hideContentOnMobile ? 'translateY(20px)' : 'translateY(0)',
-          pointerEvents: hideContentOnMobile ? 'none' : 'auto',
+          opacity: hideContentOnInit ? 0 : 1,
+          transform: hideContentOnInit ? 'translateY(20px)' : 'translateY(0)',
+          pointerEvents: hideContentOnInit ? 'none' : 'auto',
           transition: 'opacity 0.6s ease, transform 0.6s ease'
         }}
       >
