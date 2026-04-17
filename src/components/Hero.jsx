@@ -1,11 +1,63 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageSquare } from 'lucide-react';
+import { ArrowRight, MessageSquare, ArrowDown } from 'lucide-react';
 
 export default function Hero() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    const handleResize = () => setIsMobile(window.innerWidth <= 900);
+    
+    handleScroll();
+    handleResize();
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const hideContentOnMobile = isMobile && !isScrolled;
+
   return (
     <section id="hero" className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
-      <div className="container hero-layout">
+      
+      {/* Scroll Indicator */}
+      <div 
+        style={{
+          position: 'absolute',
+          bottom: '10vh',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          opacity: hideContentOnMobile ? 1 : 0,
+          pointerEvents: 'none',
+          transition: 'opacity 0.5s ease',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '8px',
+          zIndex: 20
+        }}
+      >
+        <span style={{ fontSize: '0.8rem', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)' }}>Scroll</span>
+        <motion.div animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
+          <ArrowDown size={20} color="rgba(255,255,255,0.7)" />
+        </motion.div>
+      </div>
+
+      <div 
+        className="container hero-layout"
+        style={{
+          opacity: hideContentOnMobile ? 0 : 1,
+          transform: hideContentOnMobile ? 'translateY(20px)' : 'translateY(0)',
+          pointerEvents: hideContentOnMobile ? 'none' : 'auto',
+          transition: 'opacity 0.6s ease, transform 0.6s ease'
+        }}
+      >
         
         {/* Left Side Elements */}
         <motion.div
